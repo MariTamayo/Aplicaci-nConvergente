@@ -1,0 +1,56 @@
+<mxGraphModel>
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <mxCell id="group_oltp" value="Sistemas OLTP (Operacionales)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;startSize=30;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="220" height="280" as="geometry" />
+    </mxCell>
+    <mxCell id="db_oltp" value="Base de Datos&lt;br&gt;Transaccional&lt;br&gt;(MySQL/PostgreSQL)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#6c8ebf;" vertex="1" parent="group_oltp">
+      <mxGeometry x="50" y="50" width="120" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="txt_oltp" value="* Inserciones rápidas&lt;br&gt;* Datos actuales&lt;br&gt;* Alta concurrencia" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="group_oltp">
+      <mxGeometry x="40" y="180" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="process_etl" value="ETL / Pipeline&lt;br&gt;(Extracción, Transformación, Carga)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="320" y="170" width="160" height="100" as="geometry" />
+    </mxCell>
+
+    <mxCell id="group_olap" value="Sistemas OLAP (Analíticos)" style="swimlane;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;startSize=30;" vertex="1" parent="1">
+      <mxGeometry x="540" y="80" width="220" height="280" as="geometry" />
+    </mxCell>
+    <mxCell id="db_olap" value="Data Warehouse&lt;br&gt;(Snowflake/BigQuery)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#ffffff;strokeColor=#82b366;" vertex="1" parent="group_olap">
+      <mxGeometry x="50" y="50" width="120" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="txt_olap" value="* Consultas complejas&lt;br&gt;* Datos históricos&lt;br&gt;* Soporte a Decisiones" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" vertex="1" parent="group_olap">
+      <mxGeometry x="40" y="180" width="140" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="flow1" value="Carga de datos" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="db_oltp" target="process_etl">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="290" y="190" />
+          <mxPoint x="290" y="220" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="flow2" value="Consolidación" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="process_etl" target="db_olap">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="user_app" value="App / Clientes" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+      <mxGeometry x="135" y="410" width="30" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="user_bi" value="Analistas BI" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+      <mxGeometry x="635" y="410" width="30" height="60" as="geometry" />
+    </mxCell>
+
+    <mxCell id="link_app" value="Uso Diario" style="endArrow=classic;html=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="user_app" target="db_oltp">
+      <mxGeometry width="50" height="50" relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="link_bi" value="Dashboards / Reportes" style="endArrow=classic;html=1;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="user_bi" target="db_olap">
+      <mxGeometry width="50" height="50" relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>

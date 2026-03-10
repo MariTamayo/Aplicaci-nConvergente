@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram id="useState-logic" name="Funcionamiento useState">
+    <mxGraphModel dx="983" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="def_box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#64748b;fontStyle=1;align=center;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;1. DEFINICIÓN&lt;br&gt;const [valor, setValor] = useState(inicial);&lt;/font&gt;" vertex="1">
+          <mxGeometry height="60" width="260" x="280" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ui_state" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;fontColor=#1e40af;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ESTADO ACTUAL (valor)&lt;br&gt;Se muestra en la pantalla&lt;br&gt;(ej: &#39;Juan&#39;)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="200" x="310" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="event_trigger" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#ea580c;fontColor=#9a3412;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;EVENTO&lt;br&gt;El usuario escribe o&lt;br&gt;hace clic&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="310" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="setter_func" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#22c55e;fontColor=#166534;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;SETTER (setValor)&lt;br&gt;Función que solicita&lt;br&gt;el cambio de dato&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="310" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="rerender" parent="1" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#faf5ff;strokeColor=#9333ea;fontColor=#6b21a8;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;RE-RENDER&lt;br&gt;React detecta el cambio y&lt;br&gt;vuelve a dibujar la UI&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="def_box" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#3b82f6;" target="ui_state" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Se muestra&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="ui_state" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#ea580c;" target="event_trigger" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Dispara&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="event_trigger" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#22c55e;" target="setter_func" value="Llama a">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" edge="1" parent="1" source="setter_func" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#9333ea;edgeStyle=orthogonalEdgeStyle;" target="rerender" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Notifica&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" edge="1" parent="1" source="rerender" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#9333ea;edgeStyle=orthogonalEdgeStyle;" target="ui_state" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Actualiza UI&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

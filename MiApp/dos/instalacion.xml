@@ -1,0 +1,41 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="setup-final" name="Instalacion React Native">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="f1" value="FASE 1: ENTORNO" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#64748b;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="f1_t" value="1. Instalar Node.js LTS&#xa;2. Instalar Git&#xa;3. Instalar VS Code" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="f1">
+          <mxGeometry x="10" y="40" width="180" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="f2" value="FASE 2: PROYECTO" style="swimlane;whiteSpace=wrap;html=1;fillColor=#eff6ff;strokeColor=#3b82f6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="f2_t" value="• npx create-expo-app App&#xa;• cd App&#xa;• npx expo start" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontFamily=Courier New;" vertex="1" parent="f2">
+          <mxGeometry x="10" y="40" width="220" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="f3" value="FASE 3: EJECUCIÓN" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#22c55e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="500" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="f3_a" value="OPCIÓN MÓVIL (Expo Go)&#xa;Escanea el QR con tu celular real.&#xa;Ideal para probar cámara y sensores." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#22c55e;" vertex="1" parent="f3">
+          <mxGeometry x="20" y="45" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="f3_b" value="OPCIÓN PC (Emuladores)&#xa;Tecla 'a' -&gt; Android Studio&#xa;Tecla 'i' -&gt; iOS Simulator (Mac)&#xa;Tecla 'w' -&gt; Web Browser" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#22c55e;" vertex="1" parent="f3">
+          <mxGeometry x="260" y="45" width="220" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#3b82f6;" edge="1" parent="1" source="f1" target="f2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#22c55e;" edge="1" parent="1" source="f2" target="f3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

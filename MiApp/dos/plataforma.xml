@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram id="react-native-architecture" name="Arquitectura React Native">
+    <mxGraphModel dx="1425" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="js_world" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f0f9ff;strokeColor=#0ea5e9;fontStyle=1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ENTORNO JAVASCRIPT (Lógica)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="240" width="260" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="js_desc" parent="js_world" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;• React Components&lt;br&gt;• Lógica de Negocio&lt;br&gt;• Gestión de Estado (useState)&lt;br&gt;• Llamadas a APIs (Fetch)&lt;br&gt;• Eventos de Usuario&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="220" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bridge" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#64748b;fontStyle=1;align=center;" value="EL PUENTE (JSON BRIDGE / JSI)&#xa;Traductor de mensajes bidireccional" vertex="1">
+          <mxGeometry height="120" width="160" x="340" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="native_world" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;fontStyle=1" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;ENTORNO NATIVO (Hardware)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="240" width="260" x="540" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="native_desc" parent="native_world" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;• UI Nativa (Botones, Listas)&lt;br&gt;• Cámara y Galería&lt;br&gt;• Sensores (GPS, Acelerómetro)&lt;br&gt;• Almacenamiento Local&lt;br&gt;• Notificaciones Push&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="220" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" edge="1" parent="1" source="js_world" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#0ea5e9;" target="bridge" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Instrucciones&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="flow2" edge="1" parent="1" source="bridge" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#64748b;" target="native_world" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Renderiza&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="flow3" edge="1" parent="1" source="native_world" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#e11d48;" target="bridge" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Eventos (Click/Touch)&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="flow4" edge="1" parent="1" source="bridge" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#64748b;" target="js_world" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Actualiza Estado&lt;/font&gt;">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="note" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;React Native no es una Web embebida. Transforma tu código JS en componentes reales de Android e iOS.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="560" x="140" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

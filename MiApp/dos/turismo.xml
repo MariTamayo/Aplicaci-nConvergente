@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.5.2">
+  <diagram id="AlcanceProyectoGirardot" name="Alcance Presente">
+    <mxGraphModel dx="1425" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;" value="SISTEMA DE INFORMACIÓN TURÍSTICA - GIRARDOT&lt;br&gt;(ALCANCE PRESENTE)" vertex="1">
+          <mxGeometry height="60" width="350" x="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;&amp;nbsp;DASHBOARD ADMINISTRATIVO&lt;/span&gt;&lt;/div&gt;&lt;hr&gt;• Indicadores clave (KPIs)&lt;br&gt;• Monitoreo de encuestas&lt;br&gt;• Registro de ubicaciones&lt;br&gt;• Análisis de participación" vertex="1">
+          <mxGeometry height="120" width="220" x="60" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&amp;nbsp;MÓDULO DE ENCUESTAS&lt;br&gt;&lt;hr&gt;• Perfiles: Turistas, Comerciantes,&lt;br&gt;Comunidad y Organizadores.&lt;br&gt;• Medición de percepción&lt;br&gt;• Nivel de satisfacción" vertex="1">
+          <mxGeometry height="120" width="220" x="304" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;EXPORTACIÓN&lt;/span&gt;&lt;/div&gt;&lt;hr&gt;• Reportes en PDF&lt;br&gt;• Formatos XLSX (Excel)&lt;br&gt;• Sistematización de datos&lt;br&gt;• Análisis comparativo" vertex="1">
+          <mxGeometry height="120" width="220" x="548" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="6.1.4 VISUALIZACIÓN DE EVENTOS&lt;br&gt;&lt;hr&gt;• Agenda Reinado Nac. de Turismo&lt;br&gt;• Geolocalización de actividades&lt;br&gt;• Fechas y tipos de eventos&lt;br&gt;• Difusión turística" vertex="1">
+          <mxGeometry height="120" width="220" x="304" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="7" edge="1" parent="1" source="2" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8" edge="1" parent="1" source="2" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="2" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="4" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" value="Objetivo: Fortalecer la gestión institucional y el desarrollo sostenible del turismo local." vertex="1">
+          <mxGeometry height="30" width="400" x="214" y="490" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
